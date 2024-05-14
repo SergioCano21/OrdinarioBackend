@@ -31,7 +31,7 @@ const modificarServicio = asyncHandler( async (req, res) => {
     }
     const servicioActualizado = await Servicio.findByIdAndUpdate(req.params.id, req.body, {new: true});
     res.status(200).json(servicioActualizado);
-});
+});//
 
 const borrarServicio = asyncHandler( async (req, res) => {
     const servicioBorrado = await Servicio.findById(req.params.id);
